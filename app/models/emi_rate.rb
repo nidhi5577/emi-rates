@@ -1,0 +1,2 @@
+class EmiRate < ApplicationRecord
+end

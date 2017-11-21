@@ -1,0 +1,22 @@
+development:
+  adapter: postgresql
+  host: localhost
+  database: rates_development
+  pool: 25
+  username: postgres
+  password:
+
+test:
+  adapter: postgresql
+  database: rates_test
+  pool: 5
+  username: postgres
+  password:
+
+
+production:
+  adapter: postgresql
+  database: rates
+  pool: 25
+  username: postgres
+  password:
