@@ -6,7 +6,7 @@ class EmiRatesController < ApplicationController
       emi_rates = emi_on_amount.collect{|emi| {bank: emi.lender, tenures:  
       	          emi_on_amount.where(lender: emi.lender).collect{|rate| {months: 
       	          rate.tenure, rate: rate.rate, minimum_amount: rate.minimum} } }}.uniq
-      render json: emi_rates
+      render json: JSON.pretty_generate(emi_rates)
 	end
 
 end
